@@ -4,6 +4,7 @@ import MyContext from './MyContext';
 import FavBadge from './FavBadge';
 import TopicList from './TopicList';
 import '../styles/TopNavigationBar.scss'
+import FavIcon from './FavIcon';
 
 const TopNavigation = ({ topics }) => {
   const { favorites } = useContext(MyContext);
@@ -14,13 +15,17 @@ const TopNavigation = ({ topics }) => {
   ));
   return (
     <div className="top-nav-bar">
+
       <span className="top-nav-bar__logo">PhotoLabs</span>
       <span className='top-nav-bar'>
         <TopicList topics={topics} />
-        <FavBadge />
-        {likedPhotoCount > 0 && <div className='notification'> {likedPhotoCount}</div>}
+        {likedPhotoCount > 0 ? (
+          <FavIcon selected={true} displayAlert={true} />
+        ) : (
+          <FavBadge isFavorited={false} />
+        )}
       </span>
-      
+
     </div>
   )
 }

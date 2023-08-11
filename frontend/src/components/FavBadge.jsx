@@ -3,7 +3,7 @@ import FavIcon from './FavIcon';
 
 import '../styles/FavBadge.scss';
 
-const FavBadge = ({ isFavorited }) => {
+const FavBadge = () => {
 
   const [fave, setFave] = useState(false);
   const handleClick = () => setFave(!fave);
@@ -11,8 +11,8 @@ const FavBadge = ({ isFavorited }) => {
   return (
     <div className='fav-badge'>
       <FavIcon
-      selected={isFavorited}
-      displayAlert={isFavorited}/>
+      selected={handleClick}
+      displayAlert={fave}/>
     </div>
   ) 
 };

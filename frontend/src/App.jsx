@@ -1,13 +1,23 @@
 import React from 'react';
 
-import PhotoListItem from './components/PhotoListItem';
+import TopNavigation from 'components/TopNavigationBar';
+import PhotoList from 'components/PhotoList';
+import 'mocks/photos';
+import 'mocks/topics';
 import './App.scss';
+import topics from 'mocks/topics';
+import photos from 'mocks/photos';
+import HomeRoute from 'routes/HomeRoute';
 
-// Note: Rendering a single component to build components in isolation
 const App = () => {
+
+  // const photos = Array.from(Array(3))
+
   return (
     <div className="App">
-      <PhotoListItem/>
+      {/* <TopNavigation topics={topics}/>
+      <PhotoList photos={photos}/> */}
+      <HomeRoute topics={topics} photos={photos}/>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import FavIcon from './FavIcon';
 
 import '../styles/FavBadge.scss';
 
-const FavBadge = ({ isFavPhotoExist }) => {
+const FavBadge = ({ isFavorited }) => {
 
   const [fave, setFave] = useState(false);
   const handleClick = () => setFave(!fave);
@@ -11,8 +11,8 @@ const FavBadge = ({ isFavPhotoExist }) => {
   return (
     <div className='fav-badge'>
       <FavIcon
-      selected={handleClick}
-      displayAlert={!!isFavPhotoExist}/>
+      selected={isFavorited}
+      displayAlert={isFavorited}/>
     </div>
   ) 
 };

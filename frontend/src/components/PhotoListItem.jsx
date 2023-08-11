@@ -4,11 +4,14 @@ import PhotoFavButton from "./PhotoFavButton";
 import "../styles/PhotoListItem.scss";
 
 const PhotoListItem = (props) => {
-  const { city, country, imageSource, profile, username } = props;
+  const { city, country, imageSource, profile, username, isFavorited, onToggleFavorite } = props;
   /* Insert React */
   return (
     <div className="photo-list__item">
-      <PhotoFavButton />
+      <PhotoFavButton
+        isFavorited={isFavorited}
+        onClick={onToggleFavorite}
+      />
       <img
         className="photo-list__image"
         src={imageSource} alt="image" />

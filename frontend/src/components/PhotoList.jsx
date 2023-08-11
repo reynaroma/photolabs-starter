@@ -4,7 +4,7 @@ import React from "react";
 import PhotoListItem from "./PhotoListItem";
 import "../styles/PhotoList.scss";
 
-const PhotoList = ({ photos, favoritedPhotos, toggleFavorite }) => {
+const PhotoList = ({ photos }) => {
 
   const photoListItem = photos.map((photo) => {
     return (

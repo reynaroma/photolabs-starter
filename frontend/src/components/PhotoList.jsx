@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
 import React, { useContext } from "react";
-
 import MyContext from "./MyContext";
 import PhotoListItem from "./PhotoListItem";
 import "../styles/PhotoList.scss";
@@ -10,7 +9,7 @@ const PhotoList = ({ photos, openModal }) => {
 
   const photoListItem = photos.map((photo) => {
     const isFavorited = favorites.includes(photo.id);
-    console.log(photo)
+
     return (
       <PhotoListItem
         onClick={() => openModal(photo)}

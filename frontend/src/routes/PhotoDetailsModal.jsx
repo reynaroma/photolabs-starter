@@ -19,7 +19,7 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
 
       <img
         className='photo-details-modal__image'
-        src={selectedPhoto.urls.full}
+        src={selectedPhoto.urls.regular}
         alt={`Photo ${selectedPhoto.id}`}
       />
       <p className='photo-details-modal__header'>
@@ -37,3 +37,6 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
 };
 
 export default PhotoDetailsModal;
+{/* <div className='photo-details-modal__image'>
+        <PhotoList photos={[selectedPhoto]} />
+      </div> */}

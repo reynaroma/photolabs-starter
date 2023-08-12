@@ -10,7 +10,7 @@ import PhotoDetailsModal from 'routes/PhotoDetailsModal';
 import useModal from 'hooks/useModal';
 
 const App = () => {
-  const { openModal, closeModal, modalOpen } = useModal();
+  const { openModal, closeModal, modalOpen, selectedPhoto} = useModal();
 
   return (
     <div className="App">
@@ -18,7 +18,9 @@ const App = () => {
         topics={topics} photos={photos} openModal={openModal}
       />
       <PhotoDetailsModal
-        isOpen={modalOpen} onClose={closeModal}
+        isOpen={modalOpen}
+        onClose={closeModal}
+        selectedPhoto={selectedPhoto}
       />
     </div>
   );

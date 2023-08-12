@@ -3,9 +3,9 @@ import React from 'react';
 import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
 
-const PhotoDetailsModal = ({ isOpen, onClose }) => {
+const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto }) => {
   if (!isOpen) return null;
-  console.log(isOpen);
+  console.log(selectedPhoto);
 
   return (
     <div className="photo-details-modal">
@@ -13,6 +13,9 @@ const PhotoDetailsModal = ({ isOpen, onClose }) => {
       className="photo-details-modal__close-button" onClick={onClose}>
         <img src={closeSymbol} alt="close symbol" />
       </button>
+      <div>
+        {/* <img src={selectedPhoto.}/> */}
+      </div>
     </div>
   )
 };

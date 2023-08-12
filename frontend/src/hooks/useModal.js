@@ -17,7 +17,8 @@ const useModal = () => {
   return {
     modalOpen,
     openModal,
-    closeModal
+    closeModal,
+    selectedPhoto
   };
 };
 

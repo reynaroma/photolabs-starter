@@ -10,6 +10,7 @@ const PhotoList = ({ photos, openModal }) => {
 
   const photoListItem = photos.map((photo) => {
     const isFavorited = favorites.includes(photo.id);
+    console.log(photo)
     return (
       <PhotoListItem
         onClick={() => openModal(photo)}

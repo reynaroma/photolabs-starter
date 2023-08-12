@@ -2,12 +2,16 @@ import React from 'react';
 
 import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
+import PhotoList from 'components/PhotoList';
 
-const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto }) => {
+const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
   if (!isOpen || !selectedPhoto) return null;
 
-  const similarPhotos = selectedPhoto.similar_photos;
-  const similarPhotoKeys = Object.keys(similarPhotos);
+  const similarPhotos = Object.values(selectedPhoto.similar_photos);
+
+  // const similarPhotos = selectedPhoto.similar_photos;
+  // const similarPhotoKeys = Object.keys(similarPhotos);
+
   return (
     <div className="photo-details-modal">
       <button
@@ -15,16 +19,20 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto }) => {
         <img src={closeSymbol} alt="close symbol" />
       </button>
 
-        <img
-          className='photo-details-modal__image'
-          src={selectedPhoto.urls.full}
-          alt={`Photo ${selectedPhoto.id}`}
-        />
-        <p className='photo-details-modal__header'>
-          Similar Photos
-        </p>
+      <img
+        className='photo-details-modal__image'
+        src={selectedPhoto.urls.full}
+        alt={`Photo ${selectedPhoto.id}`}
+      />
+      <p className='photo-details-modal__header'>
+        Similar Photos
+      </p>
+      <div className="photo-details-modal__images ">
         <div className="photo-details-modal__images">
-          <ul>
+          {/* Reuse the PhotoList component to display similar photos */}
+          <PhotoList photos={similarPhotos} openModal={openModal} />
+        </div>
+        {/* <ul className='photo-list'>
             {similarPhotoKeys.map((key) => {
               const similarPhoto = similarPhotos[key];
               return (
@@ -37,8 +45,8 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto }) => {
                 </li>
               );
             })}
-          </ul>
-        </div>
+          </ul> */}
+      </div>
     </div>
   )
 };

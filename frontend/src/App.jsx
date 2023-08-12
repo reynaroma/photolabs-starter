@@ -7,13 +7,19 @@ import topics from 'mocks/topics';
 import photos from 'mocks/photos';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
+import useModal from 'hooks/useModal';
 
 const App = () => {
-
+  const { openModal, closeModal, modalOpen } = useModal();
 
   return (
     <div className="App">
-      <HomeRoute topics={topics} photos={photos} />
+      <HomeRoute
+        topics={topics} photos={photos} openModal={openModal}
+      />
+      <PhotoDetailsModal
+        isOpen={modalOpen} onClose={closeModal}
+      />
     </div>
   );
 };

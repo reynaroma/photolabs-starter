@@ -5,13 +5,14 @@ import MyContext from "./MyContext";
 import PhotoListItem from "./PhotoListItem";
 import "../styles/PhotoList.scss";
 
-const PhotoList = ({ photos }) => {
+const PhotoList = ({ photos, openModal }) => {
   const { favorites, toggleFavorite } = useContext(MyContext);
 
   const photoListItem = photos.map((photo) => {
     const isFavorited = favorites.includes(photo.id);
     return (
       <PhotoListItem
+
         key={photo.id}
         city={photo.location.city}
         country={photo.location.country}
@@ -24,7 +25,7 @@ const PhotoList = ({ photos }) => {
   })
 
   return (
-    <ul className="photo-list">
+    <ul className="photo-list" onClick={() => openModal()}>
       {photoListItem}
     </ul>
   );

@@ -8,7 +8,7 @@ const useModal = () => {
   };
 
   const closeModal = () => {
-    closeModal(false);
+    setModalOpen(false);
   }
 
   return {

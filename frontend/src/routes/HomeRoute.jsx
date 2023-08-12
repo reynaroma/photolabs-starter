@@ -6,7 +6,7 @@ import useFavorites from 'hooks/useFavorite';
 
 import '../styles/HomeRoute.scss';
 
-const HomeRoute = ({ topics, photos }) => {
+const HomeRoute = ({ topics, photos, openModal }) => {
   const {favorites, toggleFavorite} = useFavorites();
 
   return (
@@ -17,7 +17,7 @@ const HomeRoute = ({ topics, photos }) => {
           topics={topics}
         />
         <PhotoList
-          photos={photos}
+          photos={photos} openModal={openModal}
         />
       </div>
     </MyContext.Provider>

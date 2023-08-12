@@ -9,9 +9,6 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
 
   const similarPhotos = Object.values(selectedPhoto.similar_photos);
 
-  // const similarPhotos = selectedPhoto.similar_photos;
-  // const similarPhotoKeys = Object.keys(similarPhotos);
-
   return (
     <div className="photo-details-modal">
       <button
@@ -32,20 +29,7 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
           {/* Reuse the PhotoList component to display similar photos */}
           <PhotoList photos={similarPhotos} openModal={openModal} />
         </div>
-        {/* <ul className='photo-list'>
-            {similarPhotoKeys.map((key) => {
-              const similarPhoto = similarPhotos[key];
-              return (
-                <li key={key}>
-                  <img
-                    className="photo-details-modal__similar-image"
-                    src={similarPhoto.urls.regular}
-                    alt={`Similar Photo ${key}`}
-                  />
-                </li>
-              );
-            })}
-          </ul> */}
+
       </div>
     </div>
   )

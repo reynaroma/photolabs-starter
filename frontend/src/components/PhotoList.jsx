@@ -12,7 +12,7 @@ const PhotoList = ({ photos, openModal }) => {
     const isFavorited = favorites.includes(photo.id);
     return (
       <PhotoListItem
-
+        onClick={() => openModal(photo)}
         key={photo.id}
         city={photo.location.city}
         country={photo.location.country}
@@ -20,12 +20,12 @@ const PhotoList = ({ photos, openModal }) => {
         profile={photo.user.profile}
         username={photo.user.username}
         isFavorited={isFavorited}
-        onToggleFavorite={() => toggleFavorite(photo.id)} // Call toggleFavorite with photo ID
+        onToggleFavorite={() => toggleFavorite(photo.id)}
       />)
   })
 
   return (
-    <ul className="photo-list" onClick={() => openModal()}>
+    <ul className="photo-list">
       {photoListItem}
     </ul>
   );

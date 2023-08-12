@@ -43,6 +43,3 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
 };
 
 export default PhotoDetailsModal;
-{/* <div className='photo-details-modal__image'>
-        <PhotoList photos={[selectedPhoto]} />
-      </div> */}

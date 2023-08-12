@@ -19,7 +19,7 @@ const PhotoList = ({ photos, openModal }) => {
         country={photo.location.country}
         imageSource={photo.urls.regular}
         profile={photo.user.profile}
-        username={photo.user.username}
+        name={photo.user.name}
         isFavorited={isFavorited}
         onToggleFavorite={() => toggleFavorite(photo.id)}
       />)

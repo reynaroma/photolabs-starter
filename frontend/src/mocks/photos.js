@@ -190,6 +190,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -199,6 +201,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -208,6 +212,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -217,6 +223,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -226,6 +234,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -235,6 +245,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -244,6 +256,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -253,6 +267,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -262,6 +278,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   },
   {
@@ -271,6 +289,8 @@ const photos = [
       photo3,
       photo4,
       photo5,
+      photo6,
+      photo7,
     }
   }
 ]

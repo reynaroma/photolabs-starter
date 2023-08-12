@@ -4,7 +4,7 @@ import PhotoFavButton from "./PhotoFavButton";
 import "../styles/PhotoListItem.scss";
 
 const PhotoListItem = (props) => {
-  const { city, country, imageSource, profile, username, isFavorited, onToggleFavorite, onClick} = props;
+  const { city, country, imageSource, profile, name, isFavorited, onToggleFavorite, onClick} = props;
   /* Insert React */
   return (
     <div className="photo-list__item" >
@@ -21,7 +21,7 @@ const PhotoListItem = (props) => {
           className="photo-list__user-profile"
           src={profile} alt="user-profile" />
         <h6 className="photo-list__user-info">
-          {username}</h6>
+          {name}</h6>
         <h6 className="photo-list__user-location">
           {city},
           {country}

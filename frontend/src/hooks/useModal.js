@@ -4,12 +4,13 @@ const useModal = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-  const openModal = (i) => {
-    console.log(i.target);
+  const openModal = (photo) => {
+    setSelectedPhoto(photo);
     setModalOpen(true);
   };
 
   const closeModal = () => {
+    setSelectedPhoto(null);
     setModalOpen(false);
   }
 

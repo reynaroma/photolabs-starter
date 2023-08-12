@@ -9,6 +9,27 @@
   width: 55%;
   overflow-y: scroll;
   border-radius: 12px;
+  /* Hide the scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Microsoft Edge */
+
+  /* Add some padding to the right to prevent content from shifting when scrollbar appears/disappears */
+  padding-right: 20px; /* Adjust as needed */
+
+  /* Custom scrollbar track */
+  &::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 248, 248, 0.1); /* Adjust as needed */
+  }
+
+  /* Hide the scrollbar thumb */
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px; /* Rounded corners for the thumb */
+  }
 }
 
 .photo-details-modal__close-button {
@@ -25,14 +46,14 @@
 }
 
 .photo-details-modal__images {
-  margin-left: 36px;
+  margin-left: 1em;
   margin-top: 8px;
 }
 
 .photo-details-modal__image {
-  padding: 6em;
-  max-width: 80%;
-  border-radius: 50px;
+  // padding: 2em;
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 .photo-details-modal__top-bar {

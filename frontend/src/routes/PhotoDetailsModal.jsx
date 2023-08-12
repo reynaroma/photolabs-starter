@@ -30,12 +30,6 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
           {/* Reuse the PhotoList component to display similar photos */}
           <PhotoList photos={similarPhotos} openModal={openModal} />
         </div>
-        <button
-          className="favorite-icon"
-          onClick={() => toggleFavorite(selectedPhoto.id)}
-        >
-          {favorites.includes(selectedPhoto.id) ? 'Unfavorite' : 'Favorite'}
-        </button>
 
       </div>
     </div>

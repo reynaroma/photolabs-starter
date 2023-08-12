@@ -7,7 +7,7 @@ import useFavorites from 'hooks/useFavorite';
 import '../styles/HomeRoute.scss';
 
 const HomeRoute = ({ topics, photos, openModal }) => {
-  const {favorites, toggleFavorite} = useFavorites();
+  const {favorites, toggleFavorite} = useContext(MyContext)
 
   return (
     <MyContext.Provider value={{ favorites, toggleFavorite }}>

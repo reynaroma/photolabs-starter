@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { defaults } from "request";
 
 const useApplicationData = () => {
   const [favorites, setFavorites] = useState([]);

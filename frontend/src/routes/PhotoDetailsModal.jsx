@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import MyContext from 'components/MyContext';
 import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
 import PhotoList from 'components/PhotoList';
@@ -8,6 +8,7 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
   if (!isOpen || !selectedPhoto) return null;
 
   const similarPhotos = Object.values(selectedPhoto.similar_photos);
+  const { favorites, toggleFavorite } = useContext(MyContext);
 
   return (
     <div className="photo-details-modal">
@@ -29,6 +30,12 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
           {/* Reuse the PhotoList component to display similar photos */}
           <PhotoList photos={similarPhotos} openModal={openModal} />
         </div>
+        <button
+          className="favorite-icon"
+          onClick={() => toggleFavorite(selectedPhoto.id)}
+        >
+          {favorites.includes(selectedPhoto.id) ? 'Unfavorite' : 'Favorite'}
+        </button>
 
       </div>
     </div>

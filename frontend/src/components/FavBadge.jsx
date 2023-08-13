@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
 import FavIcon from './FavIcon';
 
 import '../styles/FavBadge.scss';
 
 const FavBadge = () => {
 
-  const [fave, setFave] = useState(false);
-  const handleClick = () => setFave(!fave);
+  const { favorites } = useContext(MyContext);
+
+  const isFavorited = favorites.length > 0;
 
   return (
     <div className='fav-badge'>
       <FavIcon
-      selected={handleClick}
-      displayAlert={fave}/>
+        selected={!isFavorited}
+        displayAlert={isFavorited} />
     </div>
-  ) 
+  )
 };
 
 export default FavBadge;

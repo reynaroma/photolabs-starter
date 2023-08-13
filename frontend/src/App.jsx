@@ -7,8 +7,6 @@ import topics from 'mocks/topics';
 import photos from 'mocks/photos';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
-import useModal from 'hooks/useModal';
-import useFavorites from 'hooks/useFavorite';
 import useApplicationData from 'hooks/useApplicationData';
 
 const App = () => {

@@ -5,39 +5,34 @@ const useApplicationData = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-  const toggleFavorite = (photoId) => {
+  const updateToFavPhotoIds = (photoId) {
     if (favorites.includes(photoId)) {
       setFavorites(favorites.filter(id => id !== photoId));
     } else {
-      setFavorites([...favorites, photoId]);
+      setFavorites([...setFavorites, photoId])
     }
   }
 
-  const openModal = (photo) => {
-    setSelectedPhoto(photo);
+  const setPhotoSelected = (photo) => {
     setModalOpen(true);
-  };
+    setSelectedPhoto(photo);
+  }
 
-  const closeModal = () => {
-    setSelectedPhoto(null);
+  const onClosePhotoDetailsModal = () => {
     setModalOpen(false);
-  };
+    setModalOpen(null);
+  }
 
   return {
     state: {
       favorites,
       modalOpen,
-      selectedPhoto,
+      selectedPhoto
     },
-    actions: {
-      setFavorites,
-      setModalOpen,
-      selectedPhoto,
-      openModal,
-      closeModal,
-      toggleFavorite
-    }
+    updateToFavPhotoIds,
+    setPhotoSelected,
+    onClosePhotoDetailsModal
   }
-};
+}
 
 export default useApplicationData;

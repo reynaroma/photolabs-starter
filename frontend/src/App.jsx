@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MyContext from 'components/MyContext';
 import 'mocks/photos';
 import 'mocks/topics';

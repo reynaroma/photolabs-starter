@@ -9,7 +9,7 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
   if (!isOpen || !selectedPhoto) return null;
 
   const similarPhotos = Object.values(selectedPhoto.similar_photos);
-  const { favorites, toggleFavorite } = useContext(MyContext);
+  const { favorites, updateToFavPhotoIds } = useContext(MyContext);
 
   return (
     <div className="photo-details-modal">
@@ -21,7 +21,7 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
 
         <PhotoFavButton
           isFavorited={favorites.includes(selectedPhoto.id)}
-          onClick={() => toggleFavorite(selectedPhoto.id)}
+          onClick={() => updateToFavPhotoIds(selectedPhoto.id)}
         />
         <img
           className='photo-details-modal__image'

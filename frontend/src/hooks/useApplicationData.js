@@ -66,7 +66,7 @@ const useApplicationData = () => {
   const openModal = (photo) => {
     dispatch({
       type: ACTIONS.DISPLAY_PHOTO_DETAILS,
-      payload: { id: photo }
+      payload: { photo }
     });
   }
 

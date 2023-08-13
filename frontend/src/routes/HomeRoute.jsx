@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { useContext } from 'react';
 import TopNavigation from 'components/TopNavigationBar';
 import PhotoList from 'components/PhotoList';
 import MyContext from 'components/MyContext';

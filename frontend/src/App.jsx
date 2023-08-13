@@ -9,22 +9,31 @@ import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
 import useModal from 'hooks/useModal';
 import useFavorites from 'hooks/useFavorite';
+import useApplicationData from 'hooks/useApplicationData';
 
 const App = () => {
-  const { openModal, closeModal, modalOpen, selectedPhoto} = useModal();
+  const {
+    state,
+    updateToFavPhotoIds,
+    setPhotoSelected,
+    onClosePhotoDetailsModal,
+ } = useApplicationData();
   const contextValues = useFavorites();
-  
+
   return (
 
-    <MyContext.Provider value={contextValues}>
+    <MyContext.Provider value={{state, updateToFavPhotoIds}}>
       <div className="App">
         <HomeRoute
-          topics={topics} photos={photos} openModal={openModal}
+          topics=
+          {topics} 
+          photos={photos} 
+          openModal={setPhotoSelected}
         />
         <PhotoDetailsModal
-          isOpen={modalOpen}
-          onClose={closeModal}
-          selectedPhoto={selectedPhoto}
+          isOpen={state.modalOpen}
+          onClose={onClosePhotoDetailsModal}
+          selectedPhoto={state.selectedPhoto}
         />
       </div>
     </MyContext.Provider>

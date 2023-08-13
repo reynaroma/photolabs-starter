@@ -5,7 +5,7 @@ const useApplicationData = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-  const updateToFavPhotoIds = (photoId) {
+  const updateToFavPhotoIds = (photoId) => {
     if (favorites.includes(photoId)) {
       setFavorites(favorites.filter(id => id !== photoId));
     } else {

@@ -1,38 +1,36 @@
 import { useState } from "react";
 
 const useApplicationData = () => {
-  const [favorites, setFavorites] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
   const updateToFavPhotoIds = (photoId) => {
     if (favorites.includes(photoId)) {
       setFavorites(favorites.filter(id => id !== photoId));
     } else {
-      setFavorites([...setFavorites, photoId])
+      setFavorites([...favorites, photoId]);
     }
   }
 
-  const setPhotoSelected = (photo) => {
-    setModalOpen(true);
+  const openModal = (photo) => {
     setSelectedPhoto(photo);
-  }
+    setModalOpen(true);
+  };
 
-  const onClosePhotoDetailsModal = () => {
+  const closeModal = () => {
+    setSelectedPhoto(null);
     setModalOpen(false);
-    setModalOpen(null);
   }
 
   return {
-    state: {
-      favorites,
-      modalOpen,
-      selectedPhoto
-    },
-    updateToFavPhotoIds,
-    setPhotoSelected,
-    onClosePhotoDetailsModal
-  }
-}
+    modalOpen,
+    openModal,
+    closeModal,
+    selectedPhoto,
+    favorites,
+    updateToFavPhotoIds
+  };
+};
 
 export default useApplicationData;

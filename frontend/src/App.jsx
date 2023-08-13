@@ -13,27 +13,25 @@ import useApplicationData from 'hooks/useApplicationData';
 
 const App = () => {
   const {
-    state,
-    updateToFavPhotoIds,
-    setPhotoSelected,
-    onClosePhotoDetailsModal,
- } = useApplicationData();
-  const contextValues = useFavorites();
-
+    modalOpen,
+    openModal,
+    closeModal,
+    selectedPhoto,
+    favorites,
+    updateToFavPhotoIds
+  } = useApplicationData();
+  
   return (
 
-    <MyContext.Provider value={{state, updateToFavPhotoIds}}>
+    <MyContext.Provider value={{ favorites, updateToFavPhotoIds }}>
       <div className="App">
         <HomeRoute
-          topics=
-          {topics} 
-          photos={photos} 
-          openModal={setPhotoSelected}
+          topics={topics} photos={photos} openModal={openModal}
         />
         <PhotoDetailsModal
-          isOpen={state.modalOpen}
-          onClose={onClosePhotoDetailsModal}
-          selectedPhoto={state.selectedPhoto}
+          isOpen={modalOpen}
+          onClose={closeModal}
+          selectedPhoto={selectedPhoto}
         />
       </div>
     </MyContext.Provider>

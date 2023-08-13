@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-key */
-import React, { useContext } from "react";
-import MyContext from "./MyContext";
+import React, { useContext } from "react"; // Import useContext
 import PhotoListItem from "./PhotoListItem";
+import MyContext from './MyContext'; // Import the context
 import "../styles/PhotoList.scss";
 
 const PhotoList = ({ photos, openModal }) => {
-  const { favorites, toggleFavorite } = useContext(MyContext);
+  const { favorites, updateToFavPhotoIds } = useContext(MyContext); // Use the useContext hook
 
   const photoListItem = photos.map((photo) => {
     const isFavorited = favorites.includes(photo.id);
@@ -20,15 +20,12 @@ const PhotoList = ({ photos, openModal }) => {
         profile={photo.user.profile}
         name={photo.user.name}
         isFavorited={isFavorited}
-        onToggleFavorite={() => toggleFavorite(photo.id)}
-      />)
-  })
+        onToggleFavorite={() => updateToFavPhotoIds(photo.id)}
+      />
+    );
+  });
 
-  return (
-    <ul className="photo-list">
-      {photoListItem}
-    </ul>
-  );
+  return <ul className="photo-list">{photoListItem}</ul>;
 };
 
 export default PhotoList;

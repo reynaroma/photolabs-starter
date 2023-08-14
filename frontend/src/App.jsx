@@ -3,8 +3,6 @@ import MyContext from 'components/MyContext';
 import 'mocks/photos';
 import 'mocks/topics';
 import './App.scss';
-import topics from 'mocks/topics';
-import photos from 'mocks/photos';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
 import useApplicationData from 'hooks/useApplicationData';

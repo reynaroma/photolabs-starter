@@ -4,14 +4,15 @@ import React from "react";
 import TopicListItem from "./TopicListItem";
 import "../styles/TopicList.scss";
 
-const TopicList = ({ topics }) => {
+const TopicList = ({ topics, onTopicClick }) => {
 
   const topicList = topics.map((topic, index) => {
     return (
     <TopicListItem
-    key={index}
+    key={topic.id}
     slug={topic.slug}
     title={topic.title}
+    onTopicClick={onTopicClick}
     />)
   })
 

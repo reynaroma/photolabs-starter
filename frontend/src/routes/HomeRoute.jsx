@@ -18,7 +18,7 @@ const HomeRoute = ({ topics, photos, openModal, onTopicClick }) => {
           <PhotoList
             photos={photos}
             openModal={openModal}
-            context={context}
+            // context={context}
           />
         </div>
       )}

@@ -24,7 +24,7 @@ const PhotoListItem = (props) => {
           className="photo-list__user-profile"
           src={profile} alt="user-profile" />
 
-        <div className="photo-list__user-name-country">
+        <div className="photo-list__user-info__location">
           <h6 className="photo-list__user-info">
             {name}</h6>
           <h6 className="photo-list__user-location">

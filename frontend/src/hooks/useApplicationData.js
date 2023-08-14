@@ -85,7 +85,7 @@ const useApplicationData = () => {
       .catch((error) => {
         console.error(error);
       })
-  })
+  }, [])
 
   const openModal = (photo) => {
     dispatch({
@@ -112,7 +112,7 @@ const useApplicationData = () => {
     ...state,
     openModal,
     closeModal,
-    updateToFavPhotoIds
+    updateToFavPhotoIds,
   };
 };
 

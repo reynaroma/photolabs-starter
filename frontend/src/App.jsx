@@ -16,7 +16,9 @@ const App = () => {
     closeModal,
     selectedPhoto,
     favorites,
-    updateToFavPhotoIds
+    updateToFavPhotoIds,
+    photoData,
+    topicData
   } = useApplicationData();
   
   return (
@@ -24,7 +26,7 @@ const App = () => {
     <MyContext.Provider value={{ favorites, updateToFavPhotoIds }}>
       <div className="App">
         <HomeRoute
-          topics={topics} photos={photos} openModal={openModal}
+          topics={topicData} photos={photoData} openModal={openModal}
         />
         <PhotoDetailsModal
           isOpen={modalOpen}

@@ -6,7 +6,7 @@
   left: 50%;
   transform: translate(-50%, -40%);
   height: 80%;
-  width: 56%;
+  width: 50%;
   overflow-y: scroll;
   border-radius: 12px;
   /* Hide the scrollbar */
@@ -46,7 +46,7 @@
 }
 
 .photo-details-modal__images {
-  margin-left: 1em;
+  margin-left: 0.1em;
   margin-top: 8px;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .photo-details-modal__header {
-  padding-left: 2em;
+  padding-left: 1.5em;
   font-size: 18px;
   font-weight: 500;
   color: #1e1e1e;

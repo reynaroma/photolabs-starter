@@ -12,6 +12,7 @@ const TopicList = ({ topics, onTopicClick }) => {
     key={topic.id}
     slug={topic.slug}
     title={topic.title}
+    id={topic.id}
     onTopicClick={onTopicClick}
     />)
   })

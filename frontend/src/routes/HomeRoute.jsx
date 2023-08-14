@@ -5,14 +5,21 @@ import MyContext from 'components/MyContext';
 
 import '../styles/HomeRoute.scss';
 
-const HomeRoute = ({ topics, photos, openModal }) => {
+const HomeRoute = ({ topics, photos, openModal, onTopicClick }) => {
   return (
     <MyContext.Consumer>
       {context => (
         <div className="home-route">
           {/* Insert React */}
-          <TopNavigation topics={topics} />
-          <PhotoList photos={photos} openModal={openModal} context={context} />
+          <TopNavigation
+            topics={topics}
+            onTopicClick={onTopicClick}
+          />
+          <PhotoList
+            photos={photos}
+            openModal={openModal}
+            context={context}
+          />
         </div>
       )}
     </MyContext.Consumer>

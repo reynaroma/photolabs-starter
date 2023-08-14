@@ -16,9 +16,10 @@ const App = () => {
     favorites,
     updateToFavPhotoIds,
     photoData,
-    topicData
+    topicData,
+    fetchPhotosByTopic
   } = useApplicationData();
-  
+
   return (
 
     <MyContext.Provider value={{ favorites, updateToFavPhotoIds }}>
@@ -27,6 +28,7 @@ const App = () => {
           topics={topicData}
           photos={photoData}
           openModal={openModal}
+          onTopicClick={fetchPhotosByTopic}
         />
         <PhotoDetailsModal
           isOpen={modalOpen}

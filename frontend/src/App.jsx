@@ -24,7 +24,9 @@ const App = () => {
     <MyContext.Provider value={{ favorites, updateToFavPhotoIds }}>
       <div className="App">
         <HomeRoute
-          topics={topicData} photos={photoData} openModal={openModal}
+          topics={topicData}
+          photos={photoData}
+          openModal={openModal}
         />
         <PhotoDetailsModal
           isOpen={modalOpen}

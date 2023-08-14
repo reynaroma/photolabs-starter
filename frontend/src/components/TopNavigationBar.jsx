@@ -10,9 +10,6 @@ const TopNavigation = ({ topics, onTopicClick }) => {
   const { favorites } = useContext(MyContext);
   const likedPhotoCount = favorites.length;
 
-  const favoritePhotoIds = favorites.map((photoId) => (
-    <span key={photoId}>{photoId}, </span>
-  ));
   return (
     <div className="top-nav-bar">
 

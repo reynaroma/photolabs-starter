@@ -6,15 +6,15 @@ import "../styles/TopicList.scss";
 
 const TopicList = ({ topics, onTopicClick }) => {
 
-  const topicList = topics.map((topic, index) => {
+  const topicList = topics.map((topic) => {
     return (
-    <TopicListItem
-    key={topic.id}
-    slug={topic.slug}
-    title={topic.title}
-    id={topic.id}
-    onTopicClick={onTopicClick}
-    />)
+      <TopicListItem
+        key={topic.id}
+        slug={topic.slug}
+        title={topic.title}
+        id={topic.id}
+        onTopicClick={onTopicClick}
+      />)
   })
 
   return (

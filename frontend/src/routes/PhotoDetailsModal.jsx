@@ -28,6 +28,9 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
           src={selectedPhoto.urls.regular}
           alt={`Photo ${selectedPhoto.id}`}
         />
+        <div>
+          
+        </div>
       </div>
 
       <p className='photo-details-modal__header'>

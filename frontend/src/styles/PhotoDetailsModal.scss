@@ -9,23 +9,17 @@
   width: 55%;
   overflow-y: scroll;
   border-radius: 12px;
-  /* Hide the scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer and Microsoft Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 
-  /* Add some padding to the right to prevent content from shifting when scrollbar appears/disappears */
-  // padding-right: px; /* Adjust as needed */
-
-  /* Custom scrollbar track */
   &::-webkit-scrollbar {
-    width: 6px; /* Width of the scrollbar */
+    width: 6px;
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(255, 248, 248, 0.1); /* Adjust as needed */
+    background: rgba(255, 248, 248, 0.1);
   }
 
-  /* Hide the scrollbar thumb */
   &::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 3px; /* Rounded corners for the thumb */

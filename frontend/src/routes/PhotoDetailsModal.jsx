@@ -13,12 +13,12 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
 
   return (
     <div className="photo-details-modal">
+
       <button
         className="photo-details-modal__close-button" onClick={onClose}>
         <img src={closeSymbol} alt="close symbol" />
       </button>
       <div className="photo-list__item">
-
         <PhotoFavButton
           isFavorited={favorites.includes(selectedPhoto.id)}
           onClick={() => updateToFavPhotoIds(selectedPhoto.id)}
@@ -28,19 +28,14 @@ const PhotoDetailsModal = ({ isOpen, onClose, selectedPhoto, openModal }) => {
           src={selectedPhoto.urls.regular}
           alt={`Photo ${selectedPhoto.id}`}
         />
-        <div>
-          
-        </div>
       </div>
-
       <p className='photo-details-modal__header'>
         Similar Photos
       </p>
       <div className="photo-details-modal__images ">
-        {/* Reuse the PhotoList component to display similar photos */}
         <PhotoList photos={similarPhotos} openModal={openModal} />
-
       </div>
+
     </div>
   )
 };

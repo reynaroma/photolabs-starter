@@ -8,7 +8,7 @@ const PhotoListItem = (props) => {
     city, country, imageSource, profile, name,
     isFavorited, onToggleFavorite, onClick
   } = props;
-  /* Insert React */
+
   return (
     <div className="photo-list__item" >
       <PhotoFavButton

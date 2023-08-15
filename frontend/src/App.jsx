@@ -1,7 +1,6 @@
 import React from 'react';
 import MyContext from 'components/MyContext';
-import 'mocks/photos';
-import 'mocks/topics';
+
 import './App.scss';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';

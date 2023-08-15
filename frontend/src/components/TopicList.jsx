@@ -19,7 +19,6 @@ const TopicList = ({ topics, onTopicClick }) => {
 
   return (
     <div className="top-nav-bar__topic-list">
-      {/* Insert React */}
       {topicList}
     </div>
   );

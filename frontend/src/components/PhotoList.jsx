@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
-import React, { useContext } from "react"; // Import useContext
+import React, { useContext } from "react";
 import PhotoListItem from "./PhotoListItem";
-import MyContext from './MyContext'; // Import the context
+import MyContext from './MyContext';
 import "../styles/PhotoList.scss";
 
 const PhotoList = ({ photos, openModal }) => {

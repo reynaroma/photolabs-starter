@@ -7,7 +7,6 @@ const TopicListItem = (props) => {
 
   return (
     <div className="topic-list__item" onClick={() => onTopicClick(id)}>
-      {/* Insert React */}
       <span>{title}</span>
     </div>
   );

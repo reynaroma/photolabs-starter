@@ -57,7 +57,7 @@ const useApplicationData = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    fetch('http://localhost:8001/api/photos')
+    fetch('/api/photos')
       .then(res => res.json())
       .then((data) => {
         dispatch({
@@ -68,7 +68,7 @@ const useApplicationData = () => {
       .catch((error) => {
         console.error(error);
       })
-    fetch('http://localhost:8001/api/topics')
+    fetch('/api/topics')
       .then(res => res.json())
       .then((data) => {
         dispatch({

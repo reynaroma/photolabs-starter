@@ -3,6 +3,7 @@
 The PhotoLabs project, developed as part of the Web Development React course, showcases practical application of React concepts in building an interactive and dynamic web application for photo management and exploration. Through this project, learners gain hands-on experience in creating responsive user interfaces, managing state, and integrating various React libraries.
 
 # Photolabs
+
 !["The initial landing page of Photolabs, providing a glimpse of its user-friendly interface."](docs/photo-labs-starter-page.png)
 !["The top navigation bar, offering easy access to key features and topics within the Photolabs application."](docs/photo-top-navigation.png)
 !["Photolabs displaying a notification"](/docs/photo-with-notification.png)
@@ -16,7 +17,19 @@ The PhotoLabs project, developed as part of the Web Development React course, sh
 
 ## Setup
 
-Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
+To run this project locally, follow these steps:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+2. Navigate to the project directory:
+```sh
+cd your-repo-name
+```
+3. Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
+```sh
+  npm install
+```
 
 ## [Frontend] Running Webpack Development Server
 
